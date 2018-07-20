@@ -12,6 +12,8 @@ USAGE: execute from terminal
 ==================================================================
 """
 
+WRITEDIR = "/Users/CJ/Desktop/results/"
+
 
 from find_eye import *
 from find_pairs import *
@@ -92,6 +94,8 @@ def main(filename):
 		# get spectrum
 		[spec1, spec2] = get_spectrum(pair, orig)
 
+		writepath = WRITEDIR + filename[23:-4] + ".jpg"
+
 		# graph spectrum
 		x1, y1 = zip(*spec1)
 		x2, y2 = zip(*spec2)
@@ -100,7 +104,8 @@ def main(filename):
 		plt.title("NAE Spectrum - file: %s" % filename)
 		plt.xlabel("Wavelength (nm)")
 		plt.ylabel("Intensity")
-		plt.savefig('graph.jpg')
+		# plt.savefig('graph.jpg')
+		plt.savefig(writepath)
 		plt.show()
 		"""
 		# add spectrum to spec database

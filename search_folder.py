@@ -1,7 +1,7 @@
 import os
 from main import *
 import cv2
-path = "../scanner/data/"
+path = "/Users/CJ/Desktop/data/"
 i = 0
 
 MAX = 100
